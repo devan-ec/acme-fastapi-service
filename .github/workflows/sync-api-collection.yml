@@ -12,4 +12,4 @@ jobs:
       service-name: acme-fastapi-service
       kind: fastapi
     secrets:
-      collections-token: ${{ secrets.COLLECTIONS_TOKEN }}
+      COLLECTIONS_TOKEN: ${{ secrets.COLLECTIONS_TOKEN }}
