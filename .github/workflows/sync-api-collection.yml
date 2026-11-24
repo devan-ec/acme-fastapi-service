@@ -1,0 +1,15 @@
+name: Sync API collection
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    uses: devan-ec/acme-api-collections/.github/workflows/sync.yml@main
+    with:
+      service-name: acme-fastapi-service
+      kind: fastapi
+    secrets:
+      collections-token: ${{ secrets.COLLECTIONS_TOKEN }}
